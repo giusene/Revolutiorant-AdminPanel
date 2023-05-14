@@ -1,0 +1,11 @@
+@mixin default-window($width: 100%, $height: auto, $margin-bottom: rem(30px)) {
+  width: $width;
+  height: $height;
+  background-color: $window-bg;
+  padding: rem(20px);
+  margin-bottom: $margin-bottom;
+  -webkit-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
+  -moz-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
+  -o-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
+  -ms-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
+}

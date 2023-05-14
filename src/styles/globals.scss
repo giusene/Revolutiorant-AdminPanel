@@ -12,7 +12,7 @@ body {
   background-color: $background-color;
   color: $text-color;
   line-height: rem(22px);
-  font-size: rem(14px);
+  font-size: rem(16px);
   text-rendering: optimizeLegibility;
   letter-spacing: rem(0.2px);
 }
@@ -23,7 +23,7 @@ a {
 }
 
 p {
-  font-size: rem(14px);
+  font-size: rem(16px);
   margin: 0 0 10px;
   color: $text-color;
 }
@@ -31,7 +31,6 @@ p {
 h1,
 h2,
 h3 {
-  margin-top: rem(20px);
   margin-bottom: rem(10px);
 }
 
@@ -48,25 +47,25 @@ h6 {
 }
 
 h1 {
-  font-size: rem(30px);
+  font-size: rem(32px);
 }
 
 h2 {
-  font-size: rem(26px);
+  font-size: rem(28px);
 }
 
 h3 {
-  font-size: rem(22px);
+  font-size: rem(24px);
 }
 
 h4 {
-  font-size: rem(18px);
+  font-size: rem(20px);
 }
 
 h5 {
-  font-size: rem(16px);
+  font-size: rem(18px);
 }
 
 h6 {
-  font-size: rem(14px);
+  font-size: rem(16px);
 }
