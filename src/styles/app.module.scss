@@ -1,0 +1,23 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  .content {
+    flex-grow: 1;
+    display: flex;
+    .sidebar {
+      width: rem(220px);
+      border: 1px solid red;
+    }
+    .pages {
+      flex: 1;
+      .breadcrumbs {
+        border: 1px solid blue;
+      }
+      .page {
+        padding: rem(10px);
+      }
+    }
+  }
+}
