@@ -1,0 +1,86 @@
+.OutlineButton {
+  border-radius: rem(0px);
+  padding: rem(10px) rem(12px);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: rem(16px);
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: none;
+  text-transform: capitalize;
+  &:hover {
+    opacity: 1;
+  }
+  &.default {
+    background: transparent;
+    color: $label-default-color;
+    border: rem(2px) solid $label-default-color;
+    &:hover {
+      background: $label-default-bg-hover;
+      border-color: $label-default-bg-hover;
+    }
+  }
+
+  &.primary {
+    background: transparent;
+    color: $label-primary-bg;
+    border: rem(2px) solid $label-primary-bg;
+    &:hover {
+      background: $label-primary-bg;
+      color: $label-primary-color;
+      border: rem(2px) solid $label-primary-bg;
+    }
+  }
+
+  &.success {
+    background: transparent;
+    color: $label-success-bg;
+    border: rem(2px) solid $label-success-bg;
+    &:hover {
+      background: $label-success-bg;
+      color: $label-success-color;
+      border: rem(2px) solid $label-success-bg;
+    }
+  }
+
+  &.info {
+    background: transparent;
+    color: $label-info-bg;
+    border: rem(2px) solid $label-info-bg;
+    &:hover {
+      background: $label-info-bg;
+      color: $label-info-color;
+      border: rem(2px) solid $label-info-bg;
+    }
+  }
+
+  &.danger {
+    background: transparent;
+    color: $label-danger-bg;
+    border: rem(2px) solid $label-danger-bg;
+    &:hover {
+      background: $label-danger-bg;
+      color: $label-danger-color;
+      border: rem(2px) solid $label-danger-bg;
+    }
+  }
+
+  &.warning {
+    background: transparent;
+    color: $label-warning-bg;
+    border: rem(2px) solid $label-warning-bg;
+    &:hover {
+      background: $label-warning-bg;
+      color: $label-warning-color;
+      border: rem(2px) solid $label-warning-bg;
+    }
+  }
+}
