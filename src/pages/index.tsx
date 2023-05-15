@@ -1,6 +1,7 @@
 import Head from "next/head";
 import DefaultButton from "../../ui-kit/DefaultButton/DefaultButton";
 import DefaultRoundButton from "../../ui-kit/DefaultRoundButton/DefaultRoundButton";
+import OutlineButton from "../../ui-kit/OtlineButton/OutlineButton";
 import { LabelType } from "../../types/global";
 import styles from "./../styles/index.module.scss";
 
@@ -38,12 +39,22 @@ export default function Home() {
           <DefaultButton label="danger" type={LabelType.Danger} />
         </div>
         <div className={styles.box}>
+          <h3>Round Buttons</h3>
           <DefaultRoundButton label="default" type={LabelType.Default} />
           <DefaultRoundButton label="primary" type={LabelType.Primary} />
           <DefaultRoundButton label="info" type={LabelType.Info} />
           <DefaultRoundButton label="success" type={LabelType.Success} />
           <DefaultRoundButton label="warning" type={LabelType.Warning} />
           <DefaultRoundButton label="danger" type={LabelType.Danger} />
+        </div>
+        <div className={styles.box}>
+          <h3>Outline Buttons</h3>
+          <OutlineButton label="default" type={LabelType.Default} />
+          <OutlineButton label="primary" type={LabelType.Primary} />
+          <OutlineButton label="info" type={LabelType.Info} />
+          <OutlineButton label="success" type={LabelType.Success} />
+          <OutlineButton label="warning" type={LabelType.Warning} />
+          <OutlineButton label="danger" type={LabelType.Danger} />
         </div>
       </main>
     </>
