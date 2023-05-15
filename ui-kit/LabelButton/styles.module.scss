@@ -1,0 +1,64 @@
+.LabelButton {
+  display: flex;
+  align-items: center;
+  border-radius: rem(0px);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 0;
+  font-size: rem(16px);
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: none;
+  text-transform: capitalize;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.primary {
+    background: $label-primary-bg;
+    color: $label-primary-color;
+    border: rem(1px) solid $label-primary-bg;
+  }
+
+  &.success {
+    background: $label-success-bg;
+    color: $label-success-color;
+    border: rem(1px) solid $label-success-bg;
+  }
+
+  &.info {
+    background: $label-info-bg;
+    color: $label-info-color;
+    border: rem(1px) solid $label-info-bg;
+  }
+
+  &.danger {
+    background: $label-danger-bg;
+    color: $label-danger-color;
+    border: rem(1px) solid $label-danger-bg;
+  }
+
+  &.warning {
+    background: $label-warning-bg;
+    color: $label-warning-color;
+    border: rem(1px) solid $label-warning-bg;
+  }
+  .content_icon {
+    background-color: #00000010;
+    padding: rem(8px);
+    width: rem(40px);
+    height: 100%;
+    .icon {
+      font-size: rem(20px);
+    }
+  }
+  .label {
+    padding: rem(10px) rem(12px);
+  }
+}
