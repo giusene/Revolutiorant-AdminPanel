@@ -9,3 +9,9 @@
   -o-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
   -ms-box-shadow: 0 1px 3px rgba(33, 33, 33, 0.2);
 }
+
+@mixin standard-animation() {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}

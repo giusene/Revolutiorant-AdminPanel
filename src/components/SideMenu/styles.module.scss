@@ -1,0 +1,15 @@
+.SideMenu {
+  width: 100%;
+  background-color: $sidemenu-bg;
+  height: calc(100vh - $header-height - $footer-height);
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: rem(7px);
+  }
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(51, 51, 51);
+  }
+}
