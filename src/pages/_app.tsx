@@ -1,11 +1,12 @@
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import styles from "./../styles/app.module.scss";
+import Header from "@/components/Header/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={styles.Main}>
-      <div>header</div>
+      <Header />
       <div className={styles.content}>
         <div className={styles.sidebar}>sidebar</div>
         <div className={styles.pages}>

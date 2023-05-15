@@ -1,0 +1,12 @@
+.Header {
+  width: 100%;
+  background-color: $primary-color;
+  padding: rem(18px);
+  display: flex;
+  align-items: center;
+  gap: rem(20px);
+  .hamburger {
+    color: $white-color;
+    font-size: rem(30px);
+  }
+}
