@@ -1,12 +1,16 @@
+// main colors
 $primary-color: #00a5a8;
 $window-bg: #fff;
 $white-color: #fff;
+$background-color: #ecf0f5;
+$box-background: #fff;
 
 $text-color: #848484;
 $title-color: #333;
 
-$background-color: #ecf0f5;
-$box-background: #fff;
+// nav colors
+$sidemenu-bg: #283747;
+$sidemenu-txt-color: #c3c1c1;
 
 // labels color
 $label-default-color: #262525;
@@ -27,3 +31,7 @@ $label-danger-bg: #f05050;
 
 $label-warning-color: #fff;
 $label-warning-bg: #ffbd4a;
+
+// dimensioni
+$header-height: rem(70px);
+$footer-height: rem(50px);

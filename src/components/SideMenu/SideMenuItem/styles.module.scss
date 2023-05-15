@@ -1,0 +1,46 @@
+.SideMenuItem {
+  padding: rem(14px) rem(20px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+  @include standard-animation;
+  &.active {
+    background-color: #111e33;
+  }
+  .icon {
+    margin: 0;
+  }
+  .label {
+    color: $sidemenu-txt-color;
+    text-transform: capitalize;
+    margin: 0;
+    flex-grow: 1;
+  }
+  .arrow {
+    color: $sidemenu-txt-color;
+    @include standard-animation;
+    &.active {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.SubContainer {
+  max-height: rem(0px);
+  overflow: hidden;
+  background-color: #071020;
+  @include standard-animation();
+  &.show {
+    max-height: rem(200px);
+  }
+  .subItems {
+    padding: rem(10px) rem(30px);
+    color: #aaa7a7;
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
