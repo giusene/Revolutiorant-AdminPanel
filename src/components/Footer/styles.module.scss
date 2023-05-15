@@ -1,0 +1,12 @@
+.Footer {
+  height: $footer-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $white-color;
+  p {
+    margin: 0;
+  }
+}
