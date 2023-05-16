@@ -17,6 +17,7 @@
         padding: rem(10px);
         flex-grow: 1;
         overflow-y: auto;
+        margin: rem(2px) 0;
         height: 0px;
         &::-webkit-scrollbar {
           width: rem(7px);
