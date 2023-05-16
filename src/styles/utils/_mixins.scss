@@ -1,4 +1,4 @@
-@mixin default-window($width: 100%, $height: auto, $margin-bottom: rem(30px)) {
+@mixin default-window($margin-bottom: rem(30px), $width: 100%, $height: auto) {
   width: $width;
   height: $height;
   background-color: $window-bg;

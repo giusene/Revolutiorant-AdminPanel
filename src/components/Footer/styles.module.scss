@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   background-color: $white-color;
+  @include default-window(0);
   p {
     margin: 0;
   }
