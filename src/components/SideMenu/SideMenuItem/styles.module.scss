@@ -6,7 +6,7 @@
   gap: rem(10px);
   @include standard-animation;
   &.active {
-    background-color: #111e33;
+    background-color: $sidemenu-item-active;
   }
   .icon {
     margin: 0;
@@ -29,18 +29,18 @@
 .SubContainer {
   max-height: rem(0px);
   overflow: hidden;
-  background-color: #071020;
+  background-color: $sidemenu-subcontainer-bg;
   @include standard-animation();
   &.show {
     max-height: rem(200px);
   }
   .subItems {
     padding: rem(10px) rem(30px);
-    color: #aaa7a7;
+    color: $sidemenu-subitems-color;
     text-transform: capitalize;
     cursor: pointer;
     &:hover {
-      color: #fff;
+      color: $sidemenu-subitems-hover-color;
     }
   }
 }

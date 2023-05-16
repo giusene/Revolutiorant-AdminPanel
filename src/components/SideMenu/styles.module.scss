@@ -7,9 +7,9 @@
     width: rem(7px);
   }
   &::-webkit-scrollbar-track {
-    background: black;
+    background: $sidemenu-scrollbar-track;
   }
   &::-webkit-scrollbar-thumb {
-    background: rgb(51, 51, 51);
+    background: $sidemenu-scrollbar-thumb;
   }
 }
