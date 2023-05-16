@@ -4,6 +4,7 @@ import styles from "./../styles/app.module.scss";
 import Header from "@/components/Header/Header";
 import SideMenu from "@/components/SideMenu/SideMenu";
 import Footer from "@/components/Footer/Footer";
+import PageTitle from "@/components/PageTitle/PageTitle";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <SideMenu />
         </div>
         <div className={styles.pages}>
-          <div className={styles.breadcrumbs}>page title + breadcrumbs?</div>
+          <PageTitle />
           <div className={styles.page}>
             <Component {...pageProps} />
           </div>

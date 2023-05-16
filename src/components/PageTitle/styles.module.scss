@@ -1,0 +1,7 @@
+.PageTitle {
+  @include default-window(0);
+  p {
+    margin: 0;
+    text-transform: capitalize;
+  }
+}
