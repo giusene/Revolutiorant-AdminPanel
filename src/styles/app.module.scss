@@ -18,6 +18,15 @@
         flex-grow: 1;
         overflow-y: auto;
         height: 0px;
+        &::-webkit-scrollbar {
+          width: rem(7px);
+        }
+        &::-webkit-scrollbar-track {
+          background: $page-scrollbar-track;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $page-scrollbar-thumb;
+        }
       }
     }
   }
