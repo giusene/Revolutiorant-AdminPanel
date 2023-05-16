@@ -1,9 +1,7 @@
 .DefaultButton {
   border-radius: rem(0px);
   padding: rem(10px) rem(12px);
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  @include standard-animation;
   display: inline-block;
   margin-bottom: 0;
   font-size: rem(16px);

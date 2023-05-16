@@ -1,9 +1,7 @@
 .OutlineRoundButton {
   border-radius: rem(35px);
   padding: rem(8px) rem(20px);
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  @include standard-animation;
   display: inline-block;
   margin-bottom: 0;
   font-size: rem(16px);
