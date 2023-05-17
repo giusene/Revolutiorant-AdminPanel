@@ -2,7 +2,7 @@ import Head from "next/head";
 import DefaultButton from "../../ui-kit/DefaultButton/DefaultButton";
 import OutlineRoundButton from "../../ui-kit/OutlineRoundButton/OutlineRoundButton";
 import DefaultRoundButton from "../../ui-kit/DefaultRoundButton/DefaultRoundButton";
-import OutlineButton from "../../ui-kit/OtlineButton/OutlineButton";
+import OutlineButton from "../../ui-kit/OutlineButton/OutlineButton";
 import LabelButton from "../../ui-kit/LabelButton/LabelButton";
 import RoundLabelButton from "../../ui-kit/RoundLabelButton/RoundLabelButton";
 import { LabelType } from "../../types/global";
