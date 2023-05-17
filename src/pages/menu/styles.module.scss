@@ -1,0 +1,6 @@
+.MenuPage {
+  @include default-window();
+  p {
+    margin: 0;
+  }
+}
