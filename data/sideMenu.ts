@@ -15,15 +15,15 @@ export const sideMenu: SideMenuItem[] = [
     subItem: [
       {
         label: "categorie",
-        url: "/",
+        url: "/categorie",
       },
       {
         label: "prodotti",
-        url: "/",
+        url: "/prodotti",
       },
       {
         label: "aggiunzioni",
-        url: "/",
+        url: "/aggiunzioni",
       },
     ],
   },
@@ -33,11 +33,11 @@ export const sideMenu: SideMenuItem[] = [
     subItem: [
       {
         label: "sale",
-        url: "/",
+        url: "/sale",
       },
       {
         label: "agg. tavoli",
-        url: "/",
+        url: "/aggiungi",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const sideMenu: SideMenuItem[] = [
     subItem: [
       {
         label: "nuovo ordine",
-        url: "/",
+        url: "/nuovo",
       },
     ],
   },
