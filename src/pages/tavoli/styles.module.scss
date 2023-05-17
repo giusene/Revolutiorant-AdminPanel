@@ -1,0 +1,6 @@
+.TavoliPage {
+  @include default-window();
+  p {
+    margin: 0;
+  }
+}

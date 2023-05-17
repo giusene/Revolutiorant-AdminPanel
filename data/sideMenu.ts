@@ -11,7 +11,7 @@ export const sideMenu: SideMenuItem[] = [
   },
   {
     label: "menu",
-    url: "/",
+    url: "/menu",
     subItem: [
       {
         label: "categorie",
@@ -29,7 +29,7 @@ export const sideMenu: SideMenuItem[] = [
   },
   {
     label: "tavoli",
-    url: "/",
+    url: "/tavoli",
     subItem: [
       {
         label: "sale",
@@ -43,7 +43,7 @@ export const sideMenu: SideMenuItem[] = [
   },
   {
     label: "ordini",
-    url: "/",
+    url: "/ordini",
     subItem: [
       {
         label: "nuovo ordine",
@@ -53,26 +53,26 @@ export const sideMenu: SideMenuItem[] = [
   },
   {
     label: "operatori",
-    url: "/",
+    url: "/operatori",
   },
   {
     label: "clienti",
-    url: "/",
+    url: "/clienti",
   },
   {
     label: "prenotazioni",
-    url: "/",
+    url: "/prenotazioni",
   },
   {
     label: "sconti",
-    url: "/",
+    url: "/sconti",
   },
   {
     label: "statistiche",
-    url: "/",
+    url: "/statistiche",
   },
   {
     label: "impostazioni",
-    url: "/",
+    url: "/impostazioni",
   },
 ];
