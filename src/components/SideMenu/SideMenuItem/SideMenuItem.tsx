@@ -1,4 +1,4 @@
-import { Dispatch, useState } from "react";
+import { Dispatch, ReactComponentElement, ReactElement, useState } from "react";
 import { SideMenuItem } from "../../../../data/sideMenu";
 import styles from "./styles.module.scss";
 import { BiChevronRight } from "react-icons/bi";
@@ -24,7 +24,7 @@ const SideMenuItem = (props: {
 }) => {
   const [show, setShow] = useState(false);
   const { active, setActive, index } = props;
-  const { label, url, subItem } = props.item;
+  const { label, url, Icon, subItem } = props.item;
   const router = useRouter();
 
   const itemClick = (index: number) => {
@@ -69,7 +69,7 @@ const SideMenuItem = (props: {
           active === index || (show && subItem) ? styles.active : ""
         }`}
       >
-        {iconMenu()}
+        {Icon != undefined}
         <p className={styles.label}>{label}</p>
 
         <BiChevronRight
