@@ -10,6 +10,9 @@ import {
   RiGroupFill,
   RiTeamFill,
   RiContactsFill,
+  RiCouponLine,
+  RiNumbersFill,
+  RiSettings5Line,
 } from "react-icons/ri";
 
 const SideMenuItem = (props: {
@@ -41,6 +44,12 @@ const SideMenuItem = (props: {
         return <RiTeamFill />;
       case "prenotazioni":
         return <RiContactsFill />;
+      case "sconti":
+        return <RiCouponLine />;
+      case "statistiche":
+        return <RiNumbersFill />;
+      case "impostazioni":
+        return <RiSettings5Line />;
     }
   };
   return (
@@ -51,7 +60,7 @@ const SideMenuItem = (props: {
           active === index || (show && subItem) ? styles.active : ""
         }`}
       >
-        <p className={styles.icon}>{iconMenu()}</p>
+        {iconMenu()}
         <p className={styles.label}>{label}</p>
 
         <BiChevronRight
