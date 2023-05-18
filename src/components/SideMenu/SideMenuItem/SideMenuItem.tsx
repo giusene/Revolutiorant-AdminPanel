@@ -1,20 +1,8 @@
-import { Dispatch, ReactComponentElement, ReactElement, useState } from "react";
+import { Dispatch, useState } from "react";
 import { SideMenuItem } from "../../../../data/sideMenu";
 import styles from "./styles.module.scss";
 import { BiChevronRight } from "react-icons/bi";
 import { useRouter } from "next/router";
-import {
-  RiDashboardFill,
-  RiSurveyFill,
-  RiRestaurantFill,
-  RiPagesFill,
-  RiGroupFill,
-  RiTeamFill,
-  RiContactsFill,
-  RiCouponLine,
-  RiNumbersFill,
-  RiSettings5Line,
-} from "react-icons/ri";
 
 const SideMenuItem = (props: {
   item: SideMenuItem;
@@ -24,7 +12,7 @@ const SideMenuItem = (props: {
 }) => {
   const [show, setShow] = useState(false);
   const { active, setActive, index } = props;
-  const { label, url, Icon, subItem } = props.item;
+  const { label, url, MenuIcon, subItem } = props.item;
   const router = useRouter();
 
   const itemClick = (index: number) => {
@@ -37,30 +25,6 @@ const SideMenuItem = (props: {
     router.push(urlPath);
   };
 
-  const iconMenu = () => {
-    switch (label) {
-      case "dashboard":
-        return <RiDashboardFill />;
-      case "menu":
-        return <RiPagesFill />;
-      case "tavoli":
-        return <RiRestaurantFill />;
-      case "ordini":
-        return <RiSurveyFill />;
-      case "operatori":
-        return <RiGroupFill />;
-      case "clienti":
-        return <RiTeamFill />;
-      case "prenotazioni":
-        return <RiContactsFill />;
-      case "sconti":
-        return <RiCouponLine />;
-      case "statistiche":
-        return <RiNumbersFill />;
-      case "impostazioni":
-        return <RiSettings5Line />;
-    }
-  };
   return (
     <>
       <div
@@ -69,7 +33,7 @@ const SideMenuItem = (props: {
           active === index || (show && subItem) ? styles.active : ""
         }`}
       >
-        {Icon != undefined}
+        <MenuIcon />
         <p className={styles.label}>{label}</p>
 
         <BiChevronRight

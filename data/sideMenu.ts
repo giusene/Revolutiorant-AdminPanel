@@ -11,23 +11,28 @@ import {
   RiNumbersFill,
   RiSettings5Line,
 } from "react-icons/ri";
+
+interface SideMenuSubItem {
+  label: string;
+  url: string;
+}
 export interface SideMenuItem {
   label: string;
   url: string;
-  subItem?: SideMenuItem[];
-  Icon?: IconType;
+  subItem?: SideMenuSubItem[];
+  MenuIcon: IconType;
 }
 
 export const sideMenu: SideMenuItem[] = [
   {
     label: "dashboard",
     url: "/",
-    Icon: RiDashboardFill,
+    MenuIcon: RiDashboardFill,
   },
   {
     label: "menu",
     url: "/menu",
-    Icon: RiPagesFill,
+    MenuIcon: RiPagesFill,
     subItem: [
       {
         label: "categorie",
@@ -46,7 +51,7 @@ export const sideMenu: SideMenuItem[] = [
   {
     label: "tavoli",
     url: "/tavoli",
-    Icon: RiRestaurantFill,
+    MenuIcon: RiRestaurantFill,
     subItem: [
       {
         label: "sale",
@@ -61,7 +66,7 @@ export const sideMenu: SideMenuItem[] = [
   {
     label: "ordini",
     url: "/ordini",
-    Icon: RiSurveyFill,
+    MenuIcon: RiSurveyFill,
     subItem: [
       {
         label: "nuovo ordine",
@@ -72,31 +77,31 @@ export const sideMenu: SideMenuItem[] = [
   {
     label: "operatori",
     url: "/operatori",
-    Icon: RiGroupFill,
+    MenuIcon: RiGroupFill,
   },
   {
     label: "clienti",
     url: "/clienti",
-    Icon: RiTeamFill,
+    MenuIcon: RiTeamFill,
   },
   {
     label: "prenotazioni",
     url: "/prenotazioni",
-    Icon: RiContactsFill,
+    MenuIcon: RiContactsFill,
   },
   {
     label: "sconti",
     url: "/sconti",
-    Icon: RiCouponLine,
+    MenuIcon: RiCouponLine,
   },
   {
     label: "statistiche",
     url: "/statistiche",
-    Icon: RiNumbersFill,
+    MenuIcon: RiNumbersFill,
   },
   {
     label: "impostazioni",
     url: "/impostazioni",
-    Icon: RiSettings5Line,
+    MenuIcon: RiSettings5Line,
   },
 ];
