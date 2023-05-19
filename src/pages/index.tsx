@@ -7,8 +7,24 @@ import LabelButton from "../../ui-kit/LabelButton/LabelButton";
 import RoundLabelButton from "../../ui-kit/RoundLabelButton/RoundLabelButton";
 import { LabelType } from "../../types/global";
 import styles from "./../styles/index.module.scss";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    fetch("api/categories")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, []);
+
+  const addCategory = () => {
+    fetch("api/categories", {
+      method: "POST",
+      body: JSON.stringify({ name: "pizze" }),
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
+
   return (
     <>
       <Head>
@@ -34,6 +50,7 @@ export default function Home() {
         </div>
         <div className={styles.box}>
           <h3>Default Buttons</h3>
+          <button onClick={addCategory}>Aggiungi Categoria</button>
           <DefaultButton label="default" type={LabelType.Default} />
           <DefaultButton label="primary" type={LabelType.Primary} />
           <DefaultButton label="info" type={LabelType.Info} />
