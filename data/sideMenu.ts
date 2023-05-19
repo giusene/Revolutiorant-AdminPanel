@@ -12,7 +12,7 @@ import {
   RiSettings5Line,
 } from "react-icons/ri";
 
-interface SideMenuSubItem {
+export interface SideMenuSubItem {
   label: string;
   url: string;
 }
