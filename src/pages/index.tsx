@@ -7,8 +7,22 @@ import LabelButton from "../../ui-kit/LabelButton/LabelButton";
 import RoundLabelButton from "../../ui-kit/RoundLabelButton/RoundLabelButton";
 import { LabelType } from "../../types/global";
 import styles from "./../styles/index.module.scss";
+import { useEffect } from "react";
 
 export default function Home() {
+  const user = {
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815,
+  };
+
+  useEffect(() => {
+    fetch("api/categories", {
+      method: "POST",
+      body: JSON.stringify(user),
+    });
+  }, []);
+
   return (
     <>
       <Head>
