@@ -50,8 +50,11 @@ export default function Home() {
         </div>
         <div className={styles.box}>
           <h3>Default Buttons</h3>
-          <button onClick={addCategory}>Aggiungi Categoria</button>
-          <DefaultButton label="default" type={LabelType.Default} />
+          <DefaultButton
+            onClick={addCategory}
+            label="Aggiungi Categoria"
+            type={LabelType.Default}
+          />
           <DefaultButton label="primary" type={LabelType.Primary} />
           <DefaultButton label="info" type={LabelType.Info} />
           <DefaultButton label="success" type={LabelType.Success} />
