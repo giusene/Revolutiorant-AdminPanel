@@ -3,6 +3,7 @@
   background-color: $sidemenu-bg;
   height: calc(100vh - $header-height - $footer-height);
   overflow-y: auto;
+
   &::-webkit-scrollbar {
     width: rem(7px);
   }

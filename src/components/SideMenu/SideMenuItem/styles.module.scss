@@ -1,46 +1,64 @@
-.SideMenuItem {
-  padding: rem(14px) rem(20px);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: rem(10px);
-  @include standard-animation;
-  &.active {
-    background-color: $sidemenu-item-active;
-  }
-  .icon {
-    margin: 0;
-  }
-  .label {
-    color: $sidemenu-txt-color;
-    text-transform: capitalize;
-    margin: 0;
-    flex-grow: 1;
-  }
-  .arrow {
-    color: $sidemenu-txt-color;
+.main {
+  position: relative;
+  .SideMenuItem {
+    padding: rem(14px) rem(20px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
     @include standard-animation;
+
     &.active {
-      transform: rotate(90deg);
+      background-color: $sidemenu-item-active;
+    }
+    .mobile_icon {
+      @include standard-animation;
+      font-size: rem(28px);
+    }
+    .icon {
+      margin: 0;
+    }
+    .label {
+      color: $sidemenu-txt-color;
+      text-transform: capitalize;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .mobile {
+      display: none;
+    }
+    .arrow {
+      color: $sidemenu-txt-color;
+      @include standard-animation;
+      &.active {
+        transform: rotate(90deg);
+      }
     }
   }
-}
 
-.SubContainer {
-  max-height: rem(0px);
-  overflow: hidden;
-  background-color: $sidemenu-subcontainer-bg;
-  @include standard-animation();
-  &.show {
-    max-height: rem(200px);
-  }
-  .subItems {
-    padding: rem(10px) rem(30px);
-    color: $sidemenu-subitems-color;
-    text-transform: capitalize;
-    cursor: pointer;
-    &:hover {
-      color: $sidemenu-subitems-hover-color;
+  .SubContainer {
+    max-height: rem(0px);
+    overflow: hidden;
+    background-color: $sidemenu-subcontainer-bg;
+    @include standard-animation();
+    &.mobile {
+      position: absolute;
+      left: rem(70px);
+      top: rem(0px);
+    }
+    &.show {
+      max-height: rem(200px);
+    }
+
+    .subItems {
+      padding: rem(10px) rem(30px);
+      color: $sidemenu-subitems-color;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      &:hover {
+        color: $sidemenu-subitems-hover-color;
+      }
     }
   }
 }

@@ -8,6 +8,10 @@
     display: flex;
     .sidebar {
       width: rem(220px);
+      @include standard-animation;
+      &.mobile {
+        width: 70px;
+      }
     }
     .pages {
       flex: 1;
