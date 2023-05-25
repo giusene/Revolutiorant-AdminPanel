@@ -1,5 +1,4 @@
 .main {
-  position: relative;
   .SideMenuItem {
     padding: rem(14px) rem(20px);
     cursor: pointer;
@@ -41,10 +40,13 @@
     overflow: hidden;
     background-color: $sidemenu-subcontainer-bg;
     @include standard-animation();
-    &.mobile {
-      position: absolute;
-      left: rem(70px);
-      top: rem(0px);
+
+    @media screen and (min-width: 768px) {
+      &.mobile {
+        position: absolute;
+        left: rem(70px);
+        margin-top: rem(-55px);
+      }
     }
     &.show {
       max-height: rem(200px);
@@ -58,6 +60,18 @@
 
       &:hover {
         color: $sidemenu-subitems-hover-color;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    .SideMenuItem {
+      .mobile_icon {
+        font-size: rem(18px);
+      }
+      .mobile {
+        display: block;
       }
     }
   }

@@ -8,7 +8,7 @@ import PageTitle from "@/components/PageTitle/PageTitle";
 import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [viewMenu, setViewMenu] = useState<boolean>(true);
+  const [viewMenu, setViewMenu] = useState<boolean>(false);
   const toggleMenu = () => {
     setViewMenu((prev: boolean) => !prev);
   };
