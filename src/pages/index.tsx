@@ -12,8 +12,8 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     fetch("api/categories")
-      .then(res => res.json())
-      .then(data => console.log(data));
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }, []);
 
   const addCategory = () => {
@@ -30,8 +30,8 @@ export default function Home() {
       method: "DELETE",
       body: JSON.stringify({ id: "q10c5V6N2OyLgtQZO5Il" }),
     })
-      .then(res => res.json())
-      .then(data => console.log(data));
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   return (
@@ -59,57 +59,181 @@ export default function Home() {
         </div>
         <div className={styles.box}>
           <h3>Default Buttons</h3>
-          <button onClick={addCategory}>Aggiungi Categoria</button>
-          <button onClick={deleteCategory}>Rimuovi Categoria</button>
+
+                    <DefaultButton
+            onClick={addCategory}
+            label="Aggiungi Categoria"
+            type={LabelType.Default}
+          />
+          <DefaultButton
+            onClick={deleteCategory}
+            label="Rimuovi Categoria"
+            type={LabelType.Primary}
+          />
           <DefaultButton label="default" type={LabelType.Default} />
           <DefaultButton label="primary" type={LabelType.Primary} />
           <DefaultButton label="info" type={LabelType.Info} />
           <DefaultButton label="success" type={LabelType.Success} />
           <DefaultButton label="warning" type={LabelType.Warning} />
           <DefaultButton label="danger" type={LabelType.Danger} />
+
+
+
         </div>
         <div className={styles.box}>
           <h3>Outline Round Buttons</h3>
-          <OutlineRoundButton label="default" type={LabelType.Default} />
-          <OutlineRoundButton label="primary" type={LabelType.Primary} />
-          <OutlineRoundButton label="info" type={LabelType.Info} />
-          <OutlineRoundButton label="success" type={LabelType.Success} />
-          <OutlineRoundButton label="warning" type={LabelType.Warning} />
-          <OutlineRoundButton label="danger" type={LabelType.Danger} />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="default"
+            type={LabelType.Default}
+          />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="primary"
+            type={LabelType.Primary}
+          />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="info"
+            type={LabelType.Info}
+          />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="success"
+            type={LabelType.Success}
+          />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="warning"
+            type={LabelType.Warning}
+          />
+          <OutlineRoundButton
+            onClick={addCategory}
+            label="danger"
+            type={LabelType.Danger}
+          />
         </div>
         <div className={styles.box}>
           <h3>Default Round Buttons</h3>
-          <DefaultRoundButton label="default" type={LabelType.Default} />
-          <DefaultRoundButton label="primary" type={LabelType.Primary} />
-          <DefaultRoundButton label="info" type={LabelType.Info} />
-          <DefaultRoundButton label="success" type={LabelType.Success} />
-          <DefaultRoundButton label="warning" type={LabelType.Warning} />
-          <DefaultRoundButton label="danger" type={LabelType.Danger} />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="default"
+            type={LabelType.Default}
+          />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="primary"
+            type={LabelType.Primary}
+          />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="info"
+            type={LabelType.Info}
+          />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="success"
+            type={LabelType.Success}
+          />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="warning"
+            type={LabelType.Warning}
+          />
+          <DefaultRoundButton
+            onClick={addCategory}
+            label="danger"
+            type={LabelType.Danger}
+          />
         </div>
         <div className={styles.box}>
           <h3>Outline Buttons</h3>
-          <OutlineButton label="default" type={LabelType.Default} />
-          <OutlineButton label="primary" type={LabelType.Primary} />
-          <OutlineButton label="info" type={LabelType.Info} />
-          <OutlineButton label="success" type={LabelType.Success} />
-          <OutlineButton label="warning" type={LabelType.Warning} />
-          <OutlineButton label="danger" type={LabelType.Danger} />
+          <OutlineButton
+            onClick={addCategory}
+            label="default"
+            type={LabelType.Default}
+          />
+          <OutlineButton
+            onClick={addCategory}
+            label="primary"
+            type={LabelType.Primary}
+          />
+          <OutlineButton
+            onClick={addCategory}
+            label="info"
+            type={LabelType.Info}
+          />
+          <OutlineButton
+            onClick={addCategory}
+            label="success"
+            type={LabelType.Success}
+          />
+          <OutlineButton
+            onClick={addCategory}
+            label="warning"
+            type={LabelType.Warning}
+          />
+          <OutlineButton
+            onClick={addCategory}
+            label="danger"
+            type={LabelType.Danger}
+          />
         </div>
         <div className={styles.box}>
           <h3>Button Labels</h3>
-          <LabelButton label="primary" type={LabelType.Primary} />
-          <LabelButton label="info" type={LabelType.Info} />
-          <LabelButton label="success" type={LabelType.Success} />
-          <LabelButton label="warning" type={LabelType.Warning} />
-          <LabelButton label="danger" type={LabelType.Danger} />
+          <LabelButton
+            onClick={addCategory}
+            label="primary"
+            type={LabelType.Primary}
+          />
+          <LabelButton
+            onClick={addCategory}
+            label="info"
+            type={LabelType.Info}
+          />
+          <LabelButton
+            onClick={addCategory}
+            label="success"
+            type={LabelType.Success}
+          />
+          <LabelButton
+            onClick={addCategory}
+            label="warning"
+            type={LabelType.Warning}
+          />
+          <LabelButton
+            onClick={addCategory}
+            label="danger"
+            type={LabelType.Danger}
+          />
         </div>
         <div className={styles.box}>
           <h3>Round Button Labels</h3>
-          <RoundLabelButton label="primary" type={LabelType.Primary} />
-          <RoundLabelButton label="info" type={LabelType.Info} />
-          <RoundLabelButton label="success" type={LabelType.Success} />
-          <RoundLabelButton label="warning" type={LabelType.Warning} />
-          <RoundLabelButton label="danger" type={LabelType.Danger} />
+          <RoundLabelButton
+            onClick={addCategory}
+            label="primary"
+            type={LabelType.Primary}
+          />
+          <RoundLabelButton
+            onClick={addCategory}
+            label="info"
+            type={LabelType.Info}
+          />
+          <RoundLabelButton
+            onClick={addCategory}
+            label="success"
+            type={LabelType.Success}
+          />
+          <RoundLabelButton
+            onClick={addCategory}
+            label="warning"
+            type={LabelType.Warning}
+          />
+          <RoundLabelButton
+            onClick={addCategory}
+            label="danger"
+            type={LabelType.Danger}
+          />
         </div>
       </main>
     </>

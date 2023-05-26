@@ -6,10 +6,11 @@ import styles from "./styles.module.scss";
 interface Button {
   label: string;
   type: LabelType;
+  onClick?: () => void;
 }
 
 const LabelButton = (props: Button) => {
-  const { label, type } = props;
+  const { label, type, onClick } = props;
 
   const iconSelector = () => {
     switch (type) {
@@ -27,7 +28,10 @@ const LabelButton = (props: Button) => {
   };
 
   return (
-    <button className={`${styles.LabelButton} ${styles[type]}`}>
+    <button
+      onClick={() => onClick && onClick()}
+      className={`${styles.LabelButton} ${styles[type]}`}
+    >
       <div className={styles.content_icon}>{iconSelector()}</div>
       <div className={styles.label}>{label}</div>
     </button>

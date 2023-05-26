@@ -5,13 +5,14 @@ import { BiChevronRight } from "react-icons/bi";
 import { useRouter } from "next/router";
 
 const SideMenuItem = (props: {
+  mobile: boolean;
   item: SideMenuItem;
   active: number | undefined;
   index: number;
   setActive: Dispatch<React.SetStateAction<number | undefined>>;
 }) => {
   const [show, setShow] = useState(false);
-  const { active, setActive, index } = props;
+  const { active, setActive, index, mobile } = props;
   const { label, url, MenuIcon, subItem } = props.item;
   const router = useRouter();
 
@@ -26,22 +27,30 @@ const SideMenuItem = (props: {
   };
 
   return (
-    <>
+    <div className={styles.main}>
       <div
         onClick={() => itemClick(index)}
         className={`${styles.SideMenuItem} ${
           active === index || (show && subItem) ? styles.active : ""
         }`}
       >
-        <MenuIcon />
-        <p className={styles.label}>{label}</p>
+        <MenuIcon className={`${mobile ? styles.mobile_icon : ""}`} />
+        <p className={`${styles.label} ${mobile ? styles.mobile : ""}`}>
+          {label}
+        </p>
 
         <BiChevronRight
-          className={`${styles.arrow} ${show && subItem ? styles.active : ""}`}
+          className={`${styles.arrow} ${show && subItem ? styles.active : ""} ${
+            mobile ? styles.mobile : ""
+          }`}
         />
       </div>
       {subItem && (
-        <div className={`${styles.SubContainer} ${show ? styles.show : ""}`}>
+        <div
+          className={`${styles.SubContainer} ${show ? styles.show : ""} ${
+            mobile ? styles.mobile : ""
+          }`}
+        >
           {subItem.map((item, i) => (
             <div
               key={i}
@@ -53,7 +62,7 @@ const SideMenuItem = (props: {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

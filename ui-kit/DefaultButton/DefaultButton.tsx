@@ -4,12 +4,17 @@ import styles from "./styles.module.scss";
 interface Button {
   label: string;
   type: LabelType;
+  onClick?: () => void;
 }
 
 const DefaultButton = (props: Button) => {
-  const { label, type } = props;
+  const { label, type, onClick } = props;
+
   return (
-    <button className={`${styles.DefaultButton} ${styles[type]}`}>
+    <button
+      onClick={() => onClick && onClick()}
+      className={`${styles.DefaultButton} ${styles[type]}`}
+    >
       {label}
     </button>
   );
