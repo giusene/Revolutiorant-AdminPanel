@@ -19,7 +19,16 @@ export default function Home() {
   const addCategory = () => {
     fetch("api/categories", {
       method: "POST",
-      body: JSON.stringify({ name: "pizze" }),
+      body: JSON.stringify({ name: "DOlci", order: 1, status: true }),
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
+
+  const deleteCategory = () => {
+    fetch("api/categories", {
+      method: "DELETE",
+      body: JSON.stringify({ id: "q10c5V6N2OyLgtQZO5Il" }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
@@ -50,36 +59,26 @@ export default function Home() {
         </div>
         <div className={styles.box}>
           <h3>Default Buttons</h3>
-          <DefaultButton
+
+                    <DefaultButton
             onClick={addCategory}
             label="Aggiungi Categoria"
             type={LabelType.Default}
           />
           <DefaultButton
-            onClick={addCategory}
-            label="primary"
+            onClick={deleteCategory}
+            label="Rimuovi Categoria"
             type={LabelType.Primary}
           />
-          <DefaultButton
-            onClick={addCategory}
-            label="info"
-            type={LabelType.Info}
-          />
-          <DefaultButton
-            onClick={addCategory}
-            label="success"
-            type={LabelType.Success}
-          />
-          <DefaultButton
-            onClick={addCategory}
-            label="warning"
-            type={LabelType.Warning}
-          />
-          <DefaultButton
-            onClick={addCategory}
-            label="danger"
-            type={LabelType.Danger}
-          />
+          <DefaultButton label="default" type={LabelType.Default} />
+          <DefaultButton label="primary" type={LabelType.Primary} />
+          <DefaultButton label="info" type={LabelType.Info} />
+          <DefaultButton label="success" type={LabelType.Success} />
+          <DefaultButton label="warning" type={LabelType.Warning} />
+          <DefaultButton label="danger" type={LabelType.Danger} />
+
+
+
         </div>
         <div className={styles.box}>
           <h3>Outline Round Buttons</h3>

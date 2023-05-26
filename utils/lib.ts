@@ -14,3 +14,11 @@ export const checkObjectStructure = <T>(obj: any, structure: T): obj is T => {
 
   return true;
 };
+
+export const defaultErrorResponse = (method: string) => {
+  return {
+    ok: false,
+    code: 404,
+    message: `Il metodo ${method} non è implementato per questo endpoint`,
+  };
+};
