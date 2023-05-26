@@ -19,7 +19,16 @@ export default function Home() {
   const addCategory = () => {
     fetch("api/categories", {
       method: "POST",
-      body: JSON.stringify({ name: "pizze" }),
+      body: JSON.stringify({ name: "DOlci", order: 1, status: true }),
+    })
+      .then(res => res.json())
+      .then(data => console.log(data));
+  };
+
+  const deleteCategory = () => {
+    fetch("api/categories", {
+      method: "DELETE",
+      body: JSON.stringify({ id: "q10c5V6N2OyLgtQZO5Il" }),
     })
       .then(res => res.json())
       .then(data => console.log(data));
@@ -51,6 +60,7 @@ export default function Home() {
         <div className={styles.box}>
           <h3>Default Buttons</h3>
           <button onClick={addCategory}>Aggiungi Categoria</button>
+          <button onClick={deleteCategory}>Rimuovi Categoria</button>
           <DefaultButton label="default" type={LabelType.Default} />
           <DefaultButton label="primary" type={LabelType.Primary} />
           <DefaultButton label="info" type={LabelType.Info} />
