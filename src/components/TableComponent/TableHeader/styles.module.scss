@@ -1,0 +1,32 @@
+.TableHeader {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: rem(5px);
+  row-gap: rem(5px);
+
+  div {
+    background-color: #ccc;
+    padding: rem(5px) rem(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: rem(12px);
+      color: $title-color;
+    }
+  }
+  &.categories {
+    :nth-child(2) {
+      grid-column: span 6;
+      justify-content: flex-start;
+    }
+    :nth-child(3) {
+      grid-column: span 2;
+    }
+    :nth-child(4) {
+      grid-column: span 2;
+    }
+  }
+}
