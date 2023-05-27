@@ -6,8 +6,9 @@ import SideMenu from "@/components/SideMenu/SideMenu";
 import Footer from "@/components/Footer/Footer";
 import PageTitle from "@/components/PageTitle/PageTitle";
 import { useState } from "react";
+import { wrapper } from "@/store/store";
 
-export default function App({ Component, pageProps }: AppProps) {
+ function App({ Component, pageProps }: AppProps) {
   const [viewMenu, setViewMenu] = useState<boolean>(false);
   const toggleMenu = () => {
     setViewMenu((prev: boolean) => !prev);
@@ -31,3 +32,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </main>
   );
 }
+
+export default wrapper.withRedux(App);
