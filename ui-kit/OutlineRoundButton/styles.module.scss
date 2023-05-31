@@ -24,13 +24,13 @@
     }
   }
 
-  &.primary {
+  &.edit {
     background: transparent;
-    color: $label-primary-bg;
-    border: rem(2px) solid $label-primary-bg;
+    color: $label-edit-bg;
+    border: rem(2px) solid $label-edit-bg;
     &:hover {
-      background: $label-primary-bg;
-      color: $label-primary-color;
+      background: $label-edit-bg;
+      color: $label-edit-color;
     }
   }
 
