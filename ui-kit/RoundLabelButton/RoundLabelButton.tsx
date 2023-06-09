@@ -1,4 +1,4 @@
-import { BiError, BiCheck, BiX } from "react-icons/bi";
+import { BiError, BiCheck, BiX, BiPencil } from "react-icons/bi";
 import { BsExclamationLg } from "react-icons/bs";
 import { LabelType } from "../../types/global";
 import styles from "./styles.module.scss";
@@ -14,8 +14,8 @@ const RoundLabelButton = (props: Button) => {
 
   const iconSelector = () => {
     switch (type) {
-      case LabelType.Primary:
-        return <BiError className={styles.icon} />;
+      case LabelType.Edit:
+        return <BiPencil className={styles.icon} />;
       case LabelType.Info:
         return <BsExclamationLg className={styles.icon} />;
       case LabelType.Success:

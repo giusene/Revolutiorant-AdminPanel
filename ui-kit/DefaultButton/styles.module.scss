@@ -27,10 +27,10 @@
     }
   }
 
-  &.primary {
-    background: $label-primary-bg;
-    color: $label-primary-color;
-    border: rem(1px) solid $label-primary-bg;
+  &.edit {
+    background: $label-edit-bg;
+    color: $label-edit-color;
+    border: rem(1px) solid $label-edit-bg;
   }
 
   &.success {
