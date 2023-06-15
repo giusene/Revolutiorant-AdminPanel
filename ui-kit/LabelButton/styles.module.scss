@@ -5,7 +5,7 @@
   @include standard-animation;
   margin-bottom: 0;
   font-size: rem(16px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -18,10 +18,10 @@
     opacity: 0.8;
   }
 
-  &.primary {
-    background: $label-primary-bg;
-    color: $label-primary-color;
-    border: rem(1px) solid $label-primary-bg;
+  &.edit {
+    background: $label-edit-bg;
+    color: $label-edit-color;
+    border: rem(1px) solid $label-edit-bg;
   }
 
   &.success {
@@ -50,13 +50,13 @@
   .content_icon {
     background-color: #00000010;
     padding: rem(8px);
-    width: rem(40px);
-    height: 100%;
+    width: rem(35px);
+
     .icon {
-      font-size: rem(20px);
+      font-size: rem(15px);
     }
   }
   .label {
-    padding: rem(10px) rem(12px);
+    padding: rem(8px) rem(10px);
   }
 }

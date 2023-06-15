@@ -1,6 +1,6 @@
 export enum LabelType {
   Default = "default",
-  Primary = "primary",
+  Edit = "edit",
   Success = "success",
   Info = "info",
   Danger = "danger",

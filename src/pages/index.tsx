@@ -21,8 +21,8 @@ export default function Home() {
       method: "POST",
       body: JSON.stringify({ name: "DOlci", order: 1, status: true }),
     })
-      .then(res => res.json())
-      .then(data => console.log(data));
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
 
   const deleteCategory = () => {
@@ -60,7 +60,7 @@ export default function Home() {
         <div className={styles.box}>
           <h3>Default Buttons</h3>
 
-                    <DefaultButton
+          <DefaultButton
             onClick={addCategory}
             label="Aggiungi Categoria"
             type={LabelType.Default}
@@ -68,17 +68,14 @@ export default function Home() {
           <DefaultButton
             onClick={deleteCategory}
             label="Rimuovi Categoria"
-            type={LabelType.Primary}
+            type={LabelType.Edit}
           />
           <DefaultButton label="default" type={LabelType.Default} />
-          <DefaultButton label="primary" type={LabelType.Primary} />
+          <DefaultButton label="edit" type={LabelType.Edit} />
           <DefaultButton label="info" type={LabelType.Info} />
           <DefaultButton label="success" type={LabelType.Success} />
           <DefaultButton label="warning" type={LabelType.Warning} />
           <DefaultButton label="danger" type={LabelType.Danger} />
-
-
-
         </div>
         <div className={styles.box}>
           <h3>Outline Round Buttons</h3>
@@ -89,8 +86,8 @@ export default function Home() {
           />
           <OutlineRoundButton
             onClick={addCategory}
-            label="primary"
-            type={LabelType.Primary}
+            label="edit"
+            type={LabelType.Edit}
           />
           <OutlineRoundButton
             onClick={addCategory}
@@ -122,8 +119,8 @@ export default function Home() {
           />
           <DefaultRoundButton
             onClick={addCategory}
-            label="primary"
-            type={LabelType.Primary}
+            label="edit"
+            type={LabelType.Edit}
           />
           <DefaultRoundButton
             onClick={addCategory}
@@ -155,8 +152,8 @@ export default function Home() {
           />
           <OutlineButton
             onClick={addCategory}
-            label="primary"
-            type={LabelType.Primary}
+            label="edit"
+            type={LabelType.Edit}
           />
           <OutlineButton
             onClick={addCategory}
@@ -183,8 +180,8 @@ export default function Home() {
           <h3>Button Labels</h3>
           <LabelButton
             onClick={addCategory}
-            label="primary"
-            type={LabelType.Primary}
+            label="edit"
+            type={LabelType.Edit}
           />
           <LabelButton
             onClick={addCategory}
@@ -211,8 +208,8 @@ export default function Home() {
           <h3>Round Button Labels</h3>
           <RoundLabelButton
             onClick={addCategory}
-            label="primary"
-            type={LabelType.Primary}
+            label="edit"
+            type={LabelType.Edit}
           />
           <RoundLabelButton
             onClick={addCategory}
