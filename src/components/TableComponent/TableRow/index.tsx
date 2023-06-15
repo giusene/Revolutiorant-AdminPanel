@@ -42,7 +42,7 @@ const TableRow = (props: TableRowProps) => {
       ))}
 
       <div>
-        <LabelButton type={LabelType.Edit} />
+        <LabelButton label="edit" type={LabelType.Primary} />
       </div>
     </div>
   );
