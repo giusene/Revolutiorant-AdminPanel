@@ -1,5 +1,11 @@
 .CategorieSubPage {
   @include default-window();
+  .addDelete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(12px);
+  }
   p {
     margin: 0;
   }

@@ -1,0 +1,56 @@
+.NuovoCategorie {
+  @include default-window();
+  p {
+    margin: 0;
+  }
+  .icon_text {
+    display: flex;
+    align-items: center;
+    gap: rem(6px);
+    .icon {
+      font-size: rem(20px);
+    }
+  }
+
+  .formAdd {
+    max-width: rem(1200px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(30px);
+    padding: rem(50px);
+    height: calc(100vh - rem(270px));
+
+    .itemFormAdd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .inputFormAdd {
+        width: 80%;
+        padding: 5px 8px;
+      }
+    }
+    .error {
+      color: $label-danger-bg;
+      font-size: 20px;
+    }
+    .buttons {
+      margin-top: rem(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(50px);
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .NuovoCategorie {
+    .formAdd {
+      padding: 0px;
+      .itemFormAdd {
+        gap: 20px;
+      }
+    }
+  }
+}

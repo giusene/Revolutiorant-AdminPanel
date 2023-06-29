@@ -19,7 +19,7 @@ export default function Home() {
   const addCategory = () => {
     fetch("api/categories", {
       method: "POST",
-      body: JSON.stringify({ name: "DOlci", order: 1, status: true }),
+      body: JSON.stringify({ name: "Dolci", order: 1, status: true }),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));

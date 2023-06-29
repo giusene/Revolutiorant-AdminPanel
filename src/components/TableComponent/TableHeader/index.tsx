@@ -19,7 +19,7 @@ const TableHeader = (props: TableHeaderProps) => {
         </div>
       ))}
 
-      <div></div>
+      <div className={styles.emptyInside}></div>
     </div>
   );
 };
