@@ -1,4 +1,5 @@
 .PageTitle {
+  display: flex;
   @include default-window(0);
   p {
     margin: 0;

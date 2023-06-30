@@ -1,16 +1,25 @@
+import { useState } from "react";
 import { LabelType } from "../../../../types/global";
 import LabelButton from "../../../../ui-kit/LabelButton/LabelButton";
 import styles from "./styles.module.scss";
+import { useRouter } from "next/router";
 
 interface TableRowProps {
   type: string;
   header: string[];
   data: { [key: string]: any };
   index: number;
+  setDeleteList: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const TableRow = (props: TableRowProps) => {
-  const { type, data, header, index } = props;
+  const router = useRouter();
+  const [isChecked, setIsChecked] = useState(false);
+  const { type, data, header, index, setDeleteList } = props;
+
+  const edit = () => {
+    router.push(`categorie/edit/${data.id}`);
+  };
 
   const returnText = (value: any): string => {
     const check = typeof value;
@@ -26,6 +35,15 @@ const TableRow = (props: TableRowProps) => {
     }
   };
 
+  const checkedList = (value: boolean) => {
+    setIsChecked(value);
+    if (value) {
+      setDeleteList((prev: string[]) => [...prev, data.id]);
+    } else {
+      setDeleteList((prev) => prev.filter((item) => item !== data.id));
+    }
+  };
+
   return (
     <div
       className={`${styles.TableHeader} ${styles[type]} ${
@@ -33,7 +51,11 @@ const TableRow = (props: TableRowProps) => {
       }`}
     >
       <div>
-        <input type="checkbox" />
+        <input
+          checked={isChecked}
+          onChange={(e) => checkedList(e.target.checked)}
+          type="checkbox"
+        />
       </div>
       {header.map((item, index) => (
         <div key={index}>
@@ -42,7 +64,7 @@ const TableRow = (props: TableRowProps) => {
       ))}
 
       <div>
-        <LabelButton label="edit" type={LabelType.Primary} />
+        <LabelButton onClick={edit} label="edit" type={LabelType.Edit} />
       </div>
     </div>
   );

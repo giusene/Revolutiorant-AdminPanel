@@ -12,14 +12,21 @@ const SideMenuItem = (props: {
   setActive: Dispatch<React.SetStateAction<number | undefined>>;
 }) => {
   const [show, setShow] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(null);
   const { active, setActive, index, mobile } = props;
   const { label, url, MenuIcon, subItem } = props.item;
+
   const router = useRouter();
 
-  const itemClick = (index: number) => {
+  const itemClick = (index: any) => {
     setShow(!show);
     setActive(index);
     navigation(url);
+    if (mobile && menuOpen === index) {
+      setMenuOpen(null);
+    } else {
+      setMenuOpen(index);
+    }
   };
 
   const navigation = (urlPath: string) => {
@@ -32,7 +39,7 @@ const SideMenuItem = (props: {
         onClick={() => itemClick(index)}
         className={`${styles.SideMenuItem} ${
           active === index || (show && subItem) ? styles.active : ""
-        }`}
+        } `}
       >
         <MenuIcon className={`${mobile ? styles.mobile_icon : ""}`} />
         <p className={`${styles.label} ${mobile ? styles.mobile : ""}`}>
@@ -40,16 +47,16 @@ const SideMenuItem = (props: {
         </p>
 
         <BiChevronRight
-          className={`${styles.arrow} ${show && subItem ? styles.active : ""} ${
-            mobile ? styles.mobile : ""
-          }`}
+          className={`${styles.arrow} ${
+            show && subItem && menuOpen === active ? styles.active : ""
+          } ${mobile ? styles.mobile : ""}`}
         />
       </div>
       {subItem && (
         <div
           className={`${styles.SubContainer} ${show ? styles.show : ""} ${
             mobile ? styles.mobile : ""
-          }`}
+          } ${menuOpen === active ? styles.open : styles.closed}`}
         >
           {subItem.map((item, i) => (
             <div

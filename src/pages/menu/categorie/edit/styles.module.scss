@@ -1,0 +1,31 @@
+.Edit {
+  @include default-window();
+  .modificaPost {
+    max-width: rem(1200px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(30px);
+    padding: rem(50px);
+    height: calc(100vh - rem(270px));
+
+    .itemFormEdit {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .inputFormEdit {
+        width: 80%;
+        padding: 5px 8px;
+      }
+    }
+
+    .buttons {
+      margin-top: rem(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(50px);
+    }
+  }
+}
